@@ -1,6 +1,10 @@
 from bs4 import BeautifulSoup
 import requests
 import time
+###############
+import concurrent.futures
+import time
+###############
 
 import mysql.connector
 
@@ -35,11 +39,16 @@ def create(title,url):
 def update_details():
     global mydb
     mycursor = mydb.cursor()
+    session = requests.Session()
+
     mycursor.execute("select title,url from test where url not in (select url from novelsdetails) and url like '%webnovel.com%';")
     myresult = mycursor.fetchall()
     for novels in myresult:
         title,url = novels
-        page = requests.get(url).text
+        start = time.time()
+        page = session.get(url).text
+        end = time.time()
+        print("Session: ", end- start)
         soup = BeautifulSoup(page,'lxml')
         novel_object = soup.find('div',class_ = 'det-info g_row c_000 fs16 pr')
         image = "https:" + novel_object.find('img',src = True)["src"]

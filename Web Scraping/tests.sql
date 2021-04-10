@@ -11,8 +11,13 @@ image VARCHAR(300)
 
 
 CREATE TABLE chapters (
-  novelID INT FOREIGN KEY,
-  chapter_no INT,
+  novelID INT,
+  chapterno INT,
   chapter_title VARCHAR(200),
-  chapter_link VARCHAR(300)
+  chapter_link VARCHAR(300),
+  FOREIGN KEY (novelID) REFERENCES novelsdetails(novelID)
 );
+
+
+ALTER TABLE chapters
+  MODIFY chapter_title VARCHAR(300);

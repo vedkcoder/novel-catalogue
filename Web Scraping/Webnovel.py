@@ -1,11 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 import time
-###############
-import concurrent.futures
-import time
-###############
-
 import mysql.connector
 
 mydb = mysql.connector.connect(

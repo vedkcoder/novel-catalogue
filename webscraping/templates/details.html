@@ -1,0 +1,62 @@
+{% extends 'details_base.html' %}
+
+{% block content %}
+<div class="container" style="margin-top: 100px;">
+    <div class="row details">
+        <div class="col-4 image">
+            <img src="{{novel.img}}"
+                alt="{{novel.title}}">
+        </div>
+        <div class="col-8 info">
+            <h1>Title: {{novel.title}}</h1>
+            <br>
+            <h3>Author: {{novel.author}}</h3>
+            <br>
+            <h3>Genre: {{novel.genre}}</h3>
+            <br>
+            <h3>chapters:{{novel.chapter}}</h3>
+            <br>
+            <button type="button" class="btn btn-outline-primary btn-lg" style="width: 500px;"><a href="{{novel.link}}">Official
+                Page</a></button>
+        </div>
+    </div>
+    <div class="container" height="50px"></div>
+    <div class="container description" style="margin-top: 100px;">
+        <ul class="nav nav-tabs nav-fill">
+            <li class="nav-item">
+                <a class="nav-link active" href="#description">Description</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#chapters">Table Of Contents</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="description" class="tab-pane active">"
+            {{description|safe }}"
+            </div>
+            <div id="chapters" class="tab-pane">
+                <table class="table table-hover" id="ctable">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Visit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for chapter in chapters%}
+                      <tr>
+                        <th scope="row">{{chapter.no}}</th>
+                        <td>{{chapter.title}}</td>
+                        <td><a href="https://{{chapter.link}}">Read</a></td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

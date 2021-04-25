@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+    {% for novel in novels %}
+    <li class="listitems">
+        <div class="card border-dark mb-3 novelcard">
+            <div class="row">
+                <div class="col-5"><img
+                        src='{{novel.img}}'
+                        class="card-img-left cover-img" alt="{{novel.title}}"></div>
+                <div class="col-7 pl0">
+                    <div class="card-body pl0" style="position: relative;">
+                        <h6 class="card-title">{{novel.title}}</h6>
+                        <p class="card-subtitle author">Author:{{novel.author}}<br>Genre:{{novel.genre}}</p>
+
+                        <a href="/details?id={{novel.id}}" class="btn btn-outline-primary details">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

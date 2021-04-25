@@ -1,0 +1,55 @@
+.genre{
+    height: 1000px;
+    background-color: bisque;
+}
+
+.list{
+    background-color:azure;
+}
+
+.listitems{
+    width: 46%;
+    height: 210px;
+    padding: 10px;
+    margin: 2%;
+    box-sizing: border-box;
+    float: left;
+    list-style-type: none;
+}
+
+.genrelist{
+    padding-left: 5%;
+    list-style-type: none;
+}
+
+.tags{
+    width:80%;
+    margin: 5%;
+}
+.cover-img{
+    padding: 5px;
+    width: auto;
+    height: 90%;
+}
+
+.novelcard{
+    width: 100%;
+    height: 100%;
+}
+
+.pl0{
+    padding-left: 0px;
+    height: 100%;
+    padding-bottom: 7%;
+    padding-right: 5%;
+}
+
+.author{
+    font-size:medium;
+}
+
+.details{
+    position: absolute;
+    bottom:   0;
+    right: 0;
+}

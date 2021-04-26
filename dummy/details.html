@@ -15,7 +15,7 @@
     <title>Details</title>
 </head>
 
-<body>
+<body style="background-image: url('bg4.jpg');background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
     <style>
         .details {
             height: 400px;
@@ -33,11 +33,68 @@
             flex-direction: column;
             justify-content: space-around;
         }
+        .navmain{
+          background-color: #42455a;
+        }
+        .button{
+          color: black;
+        }
+        .button:hover{
+          color: black;
+          background-color: rgb(173, 173, 173);
+        }
+        .buttonlink{
+          color:black;
+        }
+        .buttonlink:hover{
+          color: rgb(173, 173, 173);
+        }
+        .desc{
+          padding-top: 10px;
+            padding-bottom: 50px;
+        }
+        .title{
+          font-family: 'Times New Roman', serif;
+        }
+        .author{
+          font-family: 'serif';
+        }
+        .genre{
+          font-family: 'serif'
+        }
+        .chap{
+        font-family: 'serif'
+        }
+        .read{
+          border-radius: 5px;;
+          border-style: solid;
+          border-spacing: 10px;;
+          outline-color: black;
+          color: black;
+          text-decoration: none;
+        }
+        .read:hover{
+          color: rgb(173, 173, 173);
+        }
+        .bottom{
+            text-align : center;
+            justify-content : center;
+            align-items : center;
+            padding-top : 40px;
+            color : white;
+        }
+        .foot{
+            height : 15d0px;
+            width : 100%;
+            align-items : center;
+            justify-content : center;
+            background-color : #42455a;
+        }
     </style>
     <!--  Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark navmain">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Webnovels Catalogue</a>
+            <a class="navbar-brand" href="/">Webnovel Catalogue</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -59,7 +116,7 @@
                     <input class="form-control me-2" type="search" placeholder="Title" aria-label="Search" name="term">
                     <input type="hidden" name="genre" value="">
                     <input type="hidden" name="author" value="">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -76,15 +133,15 @@
                 alt="Super Gene">
         </div>
         <div class="col-8 info">
-            <h1>Title: Super Gene</h1>
+            <h1 class="title">Super Gene</h1>
             <br>
-            <h3>Author: Twelve-Winged Dark Seraphim</h3>
+            <h5 class="author">Author: Twelve-Winged Dark Seraphim</h3>
             <br>
-            <h3>Genre: Sci-fi</h3>
+            <h5 class="genre">Genre: Sci-fi</h3>
             <br>
-            <h3>chapters:3055</h3>
+            <h5 class="chap">No of Chapters: 3055</h3>
             <br>
-            <button type="button" class="btn btn-outline-primary btn-lg" style="width: 500px;"><a href="https://www.webnovel.com/book/super-gene_8022472105002805">Official
+            <button type="button" class="btn btn-outline-secondary btn-lg" style="width: 500px;"><a class="buttonlink" href="https://www.webnovel.com/book/super-gene_8022472105002805">Official
                 Page</a></button>
         </div>
     </div>
@@ -92,14 +149,14 @@
     <div class="container description" style="margin-top: 100px;">
         <ul class="nav nav-tabs nav-fill">
             <li class="nav-item">
-                <a class="nav-link active" href="#description">Description</a>
+                <a class="nav-link button active" href="#description">Description</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#chapters">Table Of Contents</a>
+                <a class="nav-link button" href="#chapters">Table Of Contents</a>
             </li>
         </ul>
 
-        <div class="tab-content">
+        <div class="tab-content desc">
             <div id="description" class="tab-pane active">"
             In the magnificent interstellar era, mankind has finally developed teleport technology, but when trying to teleport, they are not sent to the future, the past, or any land known to men...
 <br> <br>This mysterious space is called God’s Sanctuary, where lived numerous unknown creatures. Here, humans will make the greatest leap in their evolution to create the most glorious epoch in history.
@@ -119,7 +176,7 @@
                       <tr>
                         <th scope="row">1</th>
                         <td>Supergene</td>
-                        <td><a href="https://www.webnovel.com/book/super-gene_8022472105002805/supergene_21637017498610114">Read</a></td>
+                        <td><a class="read" href="https://www.webnovel.com/book/super-gene_8022472105002805/supergene_21637017498610114">Read</a></td>
                       </tr>
                     
                       <tr>
@@ -18284,6 +18341,9 @@
         </div>
 
     </div>
+</div>
+<div class="row foot">
+  <h1 class="bottom">Webnovel Catalogue</h1>
 </div>
 
 
